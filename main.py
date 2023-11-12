@@ -1,7 +1,8 @@
 import streamlit as st
-import datetime
+import datetime 
 from pytz import timezone
 
+datetime.datetime.now(timezone('Asia/Seoul'))
 # 스타일링을 위한 CSS
 st.markdown("""
 <style>
@@ -23,7 +24,7 @@ st.markdown("""
 st.title("매일 루틴 및 학습 계획")
 
 # 현재 요일 가져오기
-today = datetime.datetime.today(timezone('Asia/Seoul')).weekday()  # 월요일: 0, 일요일: 6
+today = datetime.datetime.today().weekday()  # 월요일: 0, 일요일: 6
 
 task_descriptions = {
     "책보기": "선택한 책을 읽고 주요 내용을 정리합니다.",
